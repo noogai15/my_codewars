@@ -29,5 +29,5 @@ function fromRoman(str) {
   return str
     .match(/M|CM|D|CD|C|XC|L|XL|X|IX|V|IV|I/g)
     .map((roman) => book[roman])
-    .reduce((num, nextNum) => (num < nextNum ? nextNum - num : nextNum + num));
+    .reduce((num, nextNum) => num + nextNum);
 }
